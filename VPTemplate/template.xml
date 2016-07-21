@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="6"
+    name="MVP Template"
+    minApi="7"
+    description="谷歌 MVP Demo 中的 VP 模块模版">
+
+    <category value="Activity" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="myModule"
+        name="Module Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Main"
+        help="模块名称, 首字母大写(如: Login)" />
+
+    <parameter
+        id="activity_layout"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|nonempty"
+        default="activity_main"
+        help="Activity 布局文件名, 必须小写, 如: activity_main" />
+
+    <parameter
+        id="fragment_layout"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|nonempty"
+        default="fragment_main"
+        help="Fragment 布局文件名, 必须小写, 如: fragment_main" />
+
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <thumb>template_blank_activity_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
